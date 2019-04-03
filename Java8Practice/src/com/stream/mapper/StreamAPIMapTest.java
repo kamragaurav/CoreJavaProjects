@@ -5,6 +5,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamAPIMapTest {
@@ -18,6 +19,8 @@ public class StreamAPIMapTest {
 		paths.forEach(System.out::println);
 		
 		List<Integer> length = uris.stream().map((uri)->uri.length()).collect(Collectors.toList());
+		System.out.println("oooooooooooo");
+		IntStream.iterate(10, (i)->i+1).limit(200).forEach(System.out::println);;
 		System.out.println(length);
 		Integer res = length.stream().reduce(0, (x,y)->x+y);
 		System.out.println("REeee"+res);
