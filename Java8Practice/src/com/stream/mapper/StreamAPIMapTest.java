@@ -4,6 +4,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BinaryOperator;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -18,6 +19,10 @@ public class StreamAPIMapTest {
 		Stream<Path> paths = uris.stream().map((file)->Paths.get(file));
 		paths.forEach(System.out::println);
 		
+		List<Integer> length = uris.stream().map((uri)->uri.length()).collect(Collectors.toList());
+		System.out.println(length);
+		Integer res = length.stream().reduce(0, (x,y)->x+y);
+		System.out.println("REeee"+res);
 		List<String> parts1 = new ArrayList<>();
 		parts1.add("Part_1");
 		parts1.add("Part_2");
