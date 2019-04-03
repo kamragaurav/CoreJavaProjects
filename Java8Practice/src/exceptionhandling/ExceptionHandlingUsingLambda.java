@@ -2,7 +2,6 @@ package exceptionhandling;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 import java.util.function.Function;
 
@@ -22,9 +21,6 @@ public class ExceptionHandlingUsingLambda {
 	}
 	
 	private static Function<Integer, Integer> wrapperLambda(Function<Integer, Integer> function) {
-		/*return (n)->{
-			return function.apply(n);
-		};*/
 		
 		return t -> {
 	        try {
