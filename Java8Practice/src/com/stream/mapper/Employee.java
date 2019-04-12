@@ -1,4 +1,4 @@
-package predicate.function.consume.supplier;
+package com.stream.mapper;
 
 public class Employee {
 	

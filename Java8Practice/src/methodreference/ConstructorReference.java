@@ -15,8 +15,8 @@ public class ConstructorReference {
 
 	private static void findSqrtOfNumber(List<Integer> numbers, Function<Integer, Integer> function) {
 		List<Double> results = new ArrayList<>();
-		numbers.forEach(x->results.add(Math.sqrt(x)));// both line doing same thing
-		//numbers.forEach(x->results.add(Math.sqrt(function.apply(x))));
+		//numbers.forEach(x->results.add(Math.sqrt(x)));// both line doing same thing
+		numbers.forEach(x->results.add(Math.sqrt(function.apply(x))));
 		results.forEach(System.out::println);
 		
 	}
